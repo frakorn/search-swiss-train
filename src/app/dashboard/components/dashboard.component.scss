@@ -1,0 +1,57 @@
+.dashboard{
+    .dashboard--title {
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        color: #ff5f6d;
+        font-family: sans-serif;
+        padding-bottom: 20px;
+      }
+      .dashboard--search{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 20px;
+      }
+
+      .action-button{
+        padding:5px;
+      }
+    
+      .input-group {
+        padding:5px;
+           
+        .input {
+          padding: 8px;
+          font-size: 16px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          transition: border-color 0.3s ease;
+      
+          &:focus {
+            border-color: #007bff;
+            outline: none;
+          }
+        }
+      }
+      
+      .button {
+        height:35px;
+        font-size: 16px;
+        background-color: #ff5f6d;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      
+        &:hover {
+          background-color: #0056b3;
+        }
+      
+        &:disabled {
+          background-color: #cccccc;
+          cursor: not-allowed;
+        }
+      }
+}

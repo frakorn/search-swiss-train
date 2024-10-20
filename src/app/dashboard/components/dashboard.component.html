@@ -1,0 +1,27 @@
+<div class="dashboard">
+    <div class="dashboard--title">Search Train Connections SBB</div>
+    <div class="dashboard--search">
+        <div class="input-group">
+            <input class="input" id="cityFrom" type="text" [(ngModel)]="cityFrom" placeholder="From" name="cityFrom"
+                required />
+        </div>
+        <fa-icon [icon]="faTrain"></fa-icon>
+        <div class="input-group">
+            <input class="input" id="cityTo" type="text" [(ngModel)]="cityTo" placeholder="To" name="cityTo"
+                required />
+        </div>
+        <div class="action-button">
+            <button class="button" type="button" [disabled]="!cityFrom || !cityTo" (click)="search()">
+                Search
+            </button>
+        </div>
+        <div class="action-button">
+            <button class="button" type="button" (click)="gotoFavorite()">
+                Go To Favorites
+            </button>
+        </div>
+    </div>
+    <div class="dashboard--grid">
+        <app-grid [columns]="columns" [source]="source()"></app-grid>
+    </div>
+</div>

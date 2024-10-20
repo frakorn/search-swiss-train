@@ -1,0 +1,13 @@
+<div class="favorites">
+    <div class="favorites--title">Favorite Connections</div>
+    <div class="favorites--search">
+        <div class="action-button">
+            <button class="button" type="button" (click)="gotoDashboard()">
+                Go To Dashboard
+            </button>
+        </div>
+    </div>
+    <div class="favorites--grid">
+        <app-grid [columns]="columns" [source]="source()"></app-grid>
+    </div>
+</div>

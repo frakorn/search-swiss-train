@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="grid-container" *ngIf="source()?.length">
+    <div class="grid-header">
+      <div class="header-cell" *ngFor="let column of columns" [ngStyle]="{'width': column.width}">
+        {{ column.name }}
+      </div>
+    </div>
+  
+    <div class="grid-body">
+      <div class="grid-row" *ngFor="let row of source()">
+        <div class="grid-cell" *ngFor="let column of columns" [ngStyle]="{'width': column.width}">
+          <div [ngSwitch]="column.id">
+            <div *ngSwitchCase="'favorite'">
+              <div class="action-container" [class.active]="row.favorite" (click)="toggleFavorite(row)">
+                <fa-icon [icon]="faStar"></fa-icon>
+              </div>
+            </div>
+            <div *ngSwitchCase="'delete'">
+              <div *ngIf="column.id === 'delete'" class="action-container" (click)="removeFavorite(row)">
+                <fa-icon [icon]="faTrash"></fa-icon>
+              </div>
+            </div>
+            <div *ngSwitchDefault>
+              <div>{{row[column.id]}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
