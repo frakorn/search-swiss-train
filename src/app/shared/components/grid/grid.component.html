@@ -1,4 +1,5 @@
 <div class="container">
+  <div class="empty-result" *ngIf="source()?.length === 0">No Results</div>
   <div class="grid-container" *ngIf="source()?.length">
     <div class="grid-header">
       <div class="header-cell" *ngFor="let column of columns" [ngStyle]="{'width': column.width}">

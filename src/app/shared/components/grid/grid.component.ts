@@ -16,7 +16,7 @@ import { StoreService } from '../../../store/store.service';
 export class GridComponent {
 
   @Input() columns!: IColumns[]
-  source = model<Journey[]>([])  
+  source = model<Journey[]>()  
   faStar = faStar;   
   faTrash = faTrash; 
   isActive: boolean = false;

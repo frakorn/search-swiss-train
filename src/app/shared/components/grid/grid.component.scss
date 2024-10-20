@@ -7,12 +7,15 @@ $grid-cell-padding: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: sans-serif;
+  .empty-result{
+    font-weight: bold;
+  }
   .grid-container {
     display: flex;
     flex-direction: column;
     border: 1px solid $grid-border-color;
     width: 80%;
-    font-family: sans-serif;
   
     .grid-header {
       display: flex;

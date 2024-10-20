@@ -30,7 +30,7 @@ export class DashboardComponent {
     { id: 'favorite', name: 'Favorite', width: 'auto'}
   ];
 
-  source = signal<Journey[]>([]); 
+  source = signal<Journey[] | undefined>(undefined); 
 
   ngOnInit(): void {
   }
